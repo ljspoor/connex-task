@@ -16,9 +16,8 @@ The app has then been deployed to Heroku and can be viewed here:
 
 ## **Running Locally**
 
-#### Server - Within the root run `npm install` followed by `npm start`
-
-#### App - Within the /app folder run `npm install` followed by `npm start`
+- **Server** - Run `npm install` inside root followed by `npm start`
+- **_App_** - Run `npm install` inside `/app` followed by `npm start`
 
 ---
 
@@ -27,6 +26,10 @@ The app has then been deployed to Heroku and can be viewed here:
 - React
 - Redux
 - Redux Toolkit
+- React Fade In
 - Bootstrap
 - Express.js
+- CORs
+- Node Fetch
+- Sass
 - Heroku
