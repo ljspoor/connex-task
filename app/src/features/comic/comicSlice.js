@@ -12,6 +12,11 @@ export const loadLatestComic = createAsyncThunk(
   async (arg, thunkAPI) => {
     const response = await fetch('/api/latest');
     const data = await response.json();
+
+    if (data.error) {
+      return thunkAPI.rejectWithValue(data.error);
+    }
+
     return data;
   }
 );
@@ -35,6 +40,11 @@ export const loadRandomComic = createAsyncThunk(
   async (arg, thunkAPI) => {
     const response = await fetch(`/api/random`);
     const data = await response.json();
+
+    if (data.error) {
+      return thunkAPI.rejectWithValue(data.error);
+    }
+
     return data;
   }
 );
