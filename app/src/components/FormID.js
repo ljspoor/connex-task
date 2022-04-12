@@ -32,20 +32,18 @@ export const FormID = () => {
       <div className="col">
         <h6>Get comic by ID</h6>
 
-        <form onSubmit={handleOnSubmit} className="needs-validation" noValidate>
+        <form onSubmit={handleOnSubmit} noValidate>
           <div className="row">
-            <div className="col">
-              <div className="input-group has-validation">
-                <input
-                  type="text"
-                  className={validation ? 'form-control' : 'form-control is-invalid'}
-                  placeholder="Comic ID"
-                  onChange={handleOnChange}
-                  onKeyPress={handleOnKeyPress}
-                  required
-                />
-                <div className="invalid-tooltip">Please enter a number</div>
-              </div>
+            <div className="col position-relative">
+              <input
+                type="text"
+                className={validation ? 'form-control' : 'form-control is-invalid'}
+                placeholder="Comic ID"
+                onChange={handleOnChange}
+                onKeyPress={handleOnKeyPress}
+                required
+              />
+              <div className="invalid-tooltip">Please enter a number</div>
             </div>
             <div className="col-auto">
               <button type="submit" className="btn btn-primary fw-bold">
