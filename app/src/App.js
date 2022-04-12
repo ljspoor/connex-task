@@ -17,9 +17,9 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container my-5">
+      <div className="container my-3 my-sm-5">
         <div className="row justify-content-center">
-          <div className="col-4">
+          <div className="col col-sm-8 col-md-6 col-lg-4 col-xl-3">
             <Header />
             <FormID />
             <FormRandom />
