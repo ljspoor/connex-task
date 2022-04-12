@@ -38,7 +38,7 @@ export const FormID = () => {
               <input
                 type="text"
                 className={validation ? 'form-control' : 'form-control is-invalid'}
-                inputmode="numeric"
+                inputMode="numeric"
                 pattern="[0-9]*"
                 placeholder="Comic ID"
                 onChange={handleOnChange}
