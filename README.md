@@ -19,6 +19,8 @@ The app has then been deployed to Heroku and can be viewed here:
 - **_Server_** - Run `npm install` inside root followed by `npm start`
 - **_App_** - Run `npm install` inside `/app` followed by `npm start`
 
+_This has been built using Node v14.16.0_
+
 ---
 
 ### **Technologies, Services & Packages used:**
