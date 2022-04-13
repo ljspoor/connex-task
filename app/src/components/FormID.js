@@ -4,7 +4,7 @@ import { loadComicById, selectID, setID } from '../features/comic/comicSlice';
 
 export const FormID = () => {
   const dispatch = useDispatch();
-  const currentID = useSelector(selectID);
+  const id = useSelector(selectID);
   const [validation, setValidation] = useState(true);
 
   const handleOnChange = (e) => {
@@ -18,10 +18,10 @@ export const FormID = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
-    const isNumber = /[0-9]/.test(currentID);
+    const isNumber = /[0-9]/.test(id);
 
     if (isNumber) {
-      dispatch(loadComicById(currentID));
+      dispatch(loadComicById(id));
     } else {
       setValidation(false);
     }
@@ -41,6 +41,7 @@ export const FormID = () => {
                 inputMode="numeric"
                 pattern="[0-9]*"
                 placeholder="Comic ID"
+                value={id}
                 onChange={handleOnChange}
                 onKeyPress={handleOnKeyPress}
                 required

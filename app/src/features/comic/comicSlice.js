@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  id: null,
+  id: '',
   comic: null,
   status: 'idle',
   error: null,
@@ -64,10 +64,12 @@ const comicSlice = createSlice({
     [loadLatestComic.fulfilled]: (state, action) => {
       state.comic = action.payload;
       state.status = 'complete';
+      state.id = '';
     },
     [loadLatestComic.rejected]: (state, action) => {
       state.status = 'failed';
       state.error = action.payload.error;
+      state.id = '';
     },
     [loadComicById.pending]: (state) => {
       state.status = 'loading';
@@ -75,10 +77,12 @@ const comicSlice = createSlice({
     [loadComicById.fulfilled]: (state, action) => {
       state.comic = action.payload;
       state.status = 'complete';
+      state.id = '';
     },
     [loadComicById.rejected]: (state, action) => {
       state.status = 'failed';
       state.error = action.payload;
+      state.id = '';
     },
     [loadRandomComic.pending]: (state) => {
       state.status = 'loading';
@@ -86,10 +90,12 @@ const comicSlice = createSlice({
     [loadRandomComic.fulfilled]: (state, action) => {
       state.comic = action.payload;
       state.status = 'complete';
+      state.id = '';
     },
     [loadRandomComic.rejected]: (state, action) => {
       state.status = 'failed';
       state.error = action.payload;
+      state.id = '';
     },
   },
 });
